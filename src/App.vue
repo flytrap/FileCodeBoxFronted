@@ -38,7 +38,7 @@ onMounted(() => {
   } else {
     setColorMode(checkSystemColorScheme())
   }
-  api.post('/', {}).then((res: any) => {
+  api.post('/config', {}).then((res: any) => {
     if (res.code === 200) {
       localStorage.setItem('config', JSON.stringify(res.detail))
       if (

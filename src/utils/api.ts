@@ -29,7 +29,7 @@ api.interceptors.request.use(
 
     // 确保 URL 是有效的
     if (config.url && !config.url.startsWith('http')) {
-      config.url = `${sanitizedBaseURL}/${config.url.replace(/^\//, '')}`
+      config.url = `${sanitizedBaseURL}/api/${config.url.replace(/^\//, '')}`
     }
 
     return config

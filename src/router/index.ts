@@ -8,7 +8,10 @@ const router = createRouter({
     {
       path: '/',
       name: 'Retrieve',
-      component: () => import('@/views/RetrievewFileView.vue')
+      component: () => import('@/views/RetrievewFileView.vue'),
+      meta: {
+        title: '文件快递柜 - FileCodeBox'
+      }
     },
     {
       path: '/send',
@@ -45,6 +48,5 @@ const router = createRouter({
     }
   ]
 })
-
 
 export default router
